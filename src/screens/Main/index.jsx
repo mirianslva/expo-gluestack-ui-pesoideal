@@ -37,42 +37,44 @@ export default function Main() {
         setResultado("")
     }
 
-    return <Box bg="$primary100" p="$2" h={"$3/4"} w={300} borderRadius={"$md"}>
-        <Center h={"$full"}>
-            <Heading>Peso Ideal</Heading>
+    return <Box bg="$primary100" p="$2" h={"$3/4"} w={300} borderRadius={"$md"} backgroundColor={"#EFADC1"}>
+        <Center h={"$full"} style={{backgroundColor:"#ffcbdb" , fontSize: 100,}}>
+            <Heading style={{color:"#fff"}}>Peso Ideal</Heading>
             <FormControl>
                 <FormControlLabel>
-                    <FormControlLabelText>Peso</FormControlLabelText>
+                    <FormControlLabelText style={{color:"#fff",}}>Peso</FormControlLabelText>
                 </FormControlLabel>
                 <Input w={"$full"}>
                     <InputField value={peso} onChangeText={setPeso} keyboardType="numeric"/>
                 </Input>
                 <FormControlLabel>
-                    <FormControlLabelText>Altura</FormControlLabelText>
+                    <FormControlLabelText style={{color:"#fff"}}>Altura</FormControlLabelText>
                 </FormControlLabel>
                 <Input w={"$full"}>
                     <InputField value={altura} onChangeText={setAltura} keyboardType="number-pad"/>
                 </Input>
                 <FormControlLabel>
-                    <FormControlLabelText>Sexo</FormControlLabelText>
+                    <FormControlLabelText style={{color:"#fff"}}>Sexo</FormControlLabelText>
                 </FormControlLabel>
                 <HStack w={"$full"} space="md" justifyContent="center" alignItems="center">
-                    <FormControlLabelText>Homem</FormControlLabelText>
+                    <FormControlLabelText style={{color:"#fff"}}>Homem</FormControlLabelText>
                     <Switch value={sexo} onValueChange={setSexo} />
-                    <FormControlLabelText>Mulher</FormControlLabelText>
+                    <FormControlLabelText style={{color:"#fff"}}>Mulher</FormControlLabelText>
                 </HStack>
-                <Button onPress={calcularHandle}>
-                    <ButtonText>Calcular</ButtonText>
+                <Button onPress={calcularHandle} style={{backgroundColor:"#EFADC1" , borderRadius: 15,}}>
+                    <ButtonText style={{color:"#fff" ,}}>Calcular</ButtonText>
                 </Button>
-                <Button onPress={limparHandle}>
-                    <ButtonText>Limpar</ButtonText>
+                <Text style={{color:"#ffcbdb"}}> gstnrjtjhgfh </Text>
+                <Button onPress={limparHandle} style={{backgroundColor:"#EFADC1" , borderRadius: 15,}}>
+                    <ButtonText style={{color:"#fff",}}>Limpar</ButtonText>
                 </Button>
                 <Box justifyContent="space-between" alignItems="center" height={100} flexDirection="row">
-                    <Text>Resultado</Text>
+                    <Text style={{color:"#fff", }}>Resultado</Text>
                     <Text fontWeight="$bold">{resultado}</Text>
                 </Box>
             </FormControl>
-            <Image source={sexo ? mulher : homem} alt="imagem do tipo do sexo"/>
+           
         </Center>
     </Box>
 }
+
